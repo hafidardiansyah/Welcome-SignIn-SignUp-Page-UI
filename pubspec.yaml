@@ -63,6 +63,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
           style: normal
+    - family: Roboto-Bold
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+          style: normal
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
