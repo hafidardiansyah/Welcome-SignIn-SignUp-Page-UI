@@ -63,7 +63,7 @@ flutter:
       fonts:
         - asset: assets/fonts/Roboto-Regular.ttf
           style: normal
-    - family: Trajan Pro
+    - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
           style: normal
