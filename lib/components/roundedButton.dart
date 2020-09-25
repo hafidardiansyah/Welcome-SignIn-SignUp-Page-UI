@@ -22,11 +22,11 @@ class RoundedButton extends StatelessWidget {
         child: FlatButton(
             padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
             onPressed: press,
-            color: lightColor,
+            color: primaryColor,
             child: Text(
               text,
               style: TextStyle(
-                  color: whiteColor, fontFamily: "Roboto-Bold", fontSize: 17),
+                  color: whiteColor, fontFamily: "Poppins", fontSize: 17),
             )),
       ),
     );
