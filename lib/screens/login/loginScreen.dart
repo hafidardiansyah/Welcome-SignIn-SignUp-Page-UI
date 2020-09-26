@@ -58,7 +58,6 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: size.height * 0.03),
                 AlreadyHaveAnAccountCheck(
-                  login: false,
                   press: () {
                     Navigator.push(
                       context,
