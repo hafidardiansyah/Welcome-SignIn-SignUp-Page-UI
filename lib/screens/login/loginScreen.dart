@@ -2,6 +2,7 @@ import 'package:example/components/alreadyHaveAnAccountCheck.dart';
 import 'package:example/components/roundedButton.dart';
 import 'package:example/components/roundedInputField.dart';
 import 'package:example/components/roundedPasswordField.dart';
+import 'package:example/screens/signup/signupScreen.dart';
 import 'package:example/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -57,8 +58,18 @@ class LoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: size.height * 0.03),
                 AlreadyHaveAnAccountCheck(
-                  press: () {},
-                )
+                  login: false,
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return SignupScreen();
+                        },
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
           )
