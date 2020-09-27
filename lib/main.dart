@@ -1,4 +1,4 @@
-import 'package:example/screens/login/loginScreen.dart';
+import 'package:example/screens/welcomeScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +10,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: LoginScreen()),
+      title: 'Flutter Auth',
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      home: WelcomeScreen(),
     );
   }
 }
