@@ -1,30 +1,31 @@
 import 'package:example/components/alreadyHaveAnAccountCheck.dart';
-import 'package:example/components/orDivider.dart';
 import 'package:example/components/roundedButton.dart';
 import 'package:example/components/roundedInputField.dart';
 import 'package:example/components/roundedPasswordField.dart';
+import 'package:example/components/alreadyHaveAnAccountCheck.dart';
+import 'package:example/components/orDivider.dart';
 import 'package:example/components/socialIcon.dart';
 
-import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-import 'package:example/screens/signInScreen.dart';
 import 'package:example/utilities/constants.dart';
+import 'package:example/screens/signUpScreen.dart';
 
-class SignUpScreen extends StatelessWidget {
+class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
         body: Container(
-            height: size.height,
             width: double.infinity,
+            height: size.height,
             child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: size.height * 0.05),
-                  Text("SIGN UP",
+                  Text("SIGN IN",
                       style: TextStyle(
                           color: blackColor,
                           fontFamily: "Poppins",
@@ -32,7 +33,7 @@ class SignUpScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold)),
                   SizedBox(height: size.height * 0.03),
                   SvgPicture.asset(
-                    "assets/images/login.svg",
+                    "assets/images/signin.svg",
                     width: size.height * 0.35,
                   ),
                   SizedBox(height: size.height * 0.03),
@@ -46,17 +47,16 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   RoundedButton(
                     press: () {},
-                    text: "SIGN UP",
+                    text: "SIGN IN",
                   ),
                   SizedBox(height: size.height * 0.03),
                   AlreadyHaveAnAccountCheck(
-                    login: false,
                     press: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return SignInScreen();
+                            return SignUpScreen();
                           },
                         ),
                       );

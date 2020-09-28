@@ -1,55 +1,65 @@
-import 'package:example/screens/signupScreen.dart';
-import 'package:flutter/material.dart';
 import 'package:example/components/roundedButton.dart';
-import 'package:example/screens/loginScreen.dart';
+
+import 'package:example/screens/signUpScreen.dart';
+import 'package:example/screens/signInScreen.dart';
+import 'package:example/utilities/constants.dart';
+
 import 'package:flutter_svg/svg.dart';
+import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: SingleChildScrollView(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            "WELCOME",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          SizedBox(height: size.height * 0.05),
-          SvgPicture.asset(
-            "assets/icons/teacher.svg",
-            height: size.height * 0.45,
-          ),
-          SizedBox(height: size.height * 0.05),
-          RoundedButton(
-            text: "LOGIN",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return LoginScreen();
-                  },
-                ),
-              );
-            },
-          ),
-          RoundedButton(
-            text: "SIGN UP",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SignupScreen();
-                  },
-                ),
-              );
-            },
-          ),
-        ],
+        body: Container(
+      height: size.height,
+      width: double.infinity,
+      child: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(height: size.height * 0.2),
+            Text("WELCOME",
+                style: TextStyle(
+                    color: blackColor,
+                    fontFamily: "Poppins",
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold)),
+            SizedBox(height: size.height * 0.05),
+            SvgPicture.asset(
+              "assets/images/welcome.svg",
+              height: size.width * 0.5,
+            ),
+            SizedBox(height: size.height * 0.05),
+            RoundedButton(
+              text: "SIGN IN",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignInScreen();
+                    },
+                  ),
+                );
+              },
+            ),
+            RoundedButton(
+              text: "SIGN UP",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     ));
   }

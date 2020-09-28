@@ -1,4 +1,5 @@
 import 'package:example/screens/welcomeScreen.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,10 +12,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Auth',
-      theme: ThemeData(
-        primaryColor: Colors.blue,
-        scaffoldBackgroundColor: Colors.white,
-      ),
       home: WelcomeScreen(),
     );
   }
