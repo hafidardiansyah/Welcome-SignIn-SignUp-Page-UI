@@ -16,7 +16,20 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-        body: Container(
+        body: Stack(
+      alignment: Alignment.center,
+      children: [
+        Positioned(
+            top: 0,
+            left: 0,
+            child: Image.asset("assets/images/vectopleft.png",
+                width: size.width * 0.35)),
+        Positioned(
+            bottom: 0,
+            right: 0,
+            child: Image.asset("assets/images/vecbottomright.png",
+                width: size.width * 0.35)),
+        Container(
             height: size.height,
             width: double.infinity,
             child: SingleChildScrollView(
@@ -32,7 +45,7 @@ class SignUpScreen extends StatelessWidget {
                           fontWeight: FontWeight.bold)),
                   SizedBox(height: size.height * 0.03),
                   SvgPicture.asset(
-                    "assets/images/login.svg",
+                    "assets/images/signup.svg",
                     width: size.height * 0.35,
                   ),
                   SizedBox(height: size.height * 0.03),
@@ -74,6 +87,8 @@ class SignUpScreen extends StatelessWidget {
                   )
                 ],
               ),
-            )));
+            )),
+      ],
+    ));
   }
 }

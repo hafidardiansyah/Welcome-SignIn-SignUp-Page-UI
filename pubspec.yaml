@@ -45,15 +45,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/login.svg
+    - assets/icons/google.svg
     - assets/images/welcome.svg
     - assets/images/signin.svg
-    - assets/images/access.svg
-    - assets/images/vec1.svg
-    - assets/images/vec2.svg
-    - assets/images/vec3.svg
-    - assets/images/vec4.svg
-    - assets/icons/google.svg
+    - assets/images/signup.svg
+    - assets/images/vectopleft.png
+    - assets/images/vectopright.png
+    - assets/images/vecbottomleft.png
+    - assets/images/vecbottomright.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
